@@ -16,7 +16,7 @@ public class Task04 {
         System.out.println(checkInRange(numberC, numberD));
     }
     static boolean checkInRange(int num1, int num2){
-        if (num1 + num2 >= 10 && num1 + num2 <= 20) return true;
-        return false;
+        int sum = num1 + num2;
+        return sum >= 10 && sum <= 20
     }
 }
