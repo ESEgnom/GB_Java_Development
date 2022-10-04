@@ -12,7 +12,6 @@ public class Task06 {
     }
 
     static boolean isPositive(int num){
-        if(num > 0 || num == 0) return true;
-        return false;
+        return (num > 0 || num == 0) 
     }
 }
