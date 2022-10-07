@@ -30,7 +30,7 @@ public class ScannerAndRandom {
     }
 
     public static int[][] createArray(int row, int columns){
-        System.out.printf("rows: %s;%n columns %S", row, columns);
+        System.out.printf("rows: %s;%ncolumns %s%n", row, columns);
         int[][] array = new int[row][columns];
         return array;
     }
@@ -45,6 +45,14 @@ public class ScannerAndRandom {
     public static void fillArrayRandomValuesWithMathRandom(int[] array, int min, int max){
         for (int i = 0; i < array.length; i++) {
             array[i] = (int)(Math.random() * (max - min) - min);
+        }
+    }
+
+    public static void fillArrayRandomValuesWithMathRandom(int[][] array, int min, int max){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = (int)(Math.random() * (max - min) - min);
+            }
         }
     }
 
