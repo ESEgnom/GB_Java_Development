@@ -24,7 +24,7 @@ public class Main {
     public static void printInfoEmployee(Employee[] array, int ageValue) {
         for (int i = 0; i < array.length; i++) {
             if(array[i].getAge() > ageValue){
-                array[i].printInfo();
+                System.out.println(array[i]);
             }
         }
     }
