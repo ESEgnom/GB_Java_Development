@@ -28,33 +28,13 @@ public class Employee {
         this.telNumber = telNumber;
     }
 
-    public void printInfo(String fullName, int age, String position, int salary, String email, long telNumber){
-        System.out.printf("ФИО: "+ fullName+"\nВщзраст: "+ age+"\nДолжность: "+ position+"\nЗарплата: "+ salary
-                        +"\nEmail: "+ email+"\nНомер телефона: +7"+ telNumber+"\n");
+    public void printInfo(){
+        System.out.printf("ФИО: %s%nВщзраст: %s%nДолжность: %s%nЗарплата: %s%nEmail: %s%nНомер телефона: +7%s%n",
+                            fullName, age, position, salary, email, telNumber);
         System.out.println();
-    }
-
-    public String getFullName() {
-        return fullName;
     }
 
     public int getAge() {
         return age;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public long getTelNumber() {
-        return telNumber;
     }
 }

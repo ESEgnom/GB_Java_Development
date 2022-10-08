@@ -24,14 +24,7 @@ public class Main {
     public static void printInfoEmployee(Employee[] array, int ageValue) {
         for (int i = 0; i < array.length; i++) {
             if(array[i].getAge() > ageValue){
-                array[i].printInfo(
-                        array[i].getFullName(),
-                        array[i].getAge(),
-                        array[i].getPosition(),
-                        array[i].getSalary(),
-                        array[i].getEmail(),
-                        array[i].getTelNumber()
-                );
+                array[i].printInfo();
             }
         }
     }
