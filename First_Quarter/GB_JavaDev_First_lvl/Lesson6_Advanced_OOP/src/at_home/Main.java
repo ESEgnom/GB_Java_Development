@@ -8,16 +8,14 @@ public class Main {
                 new Dog("Бобик"),
                 new Cat("Тишка")
         };
-        System.out.printf("Всего животнызх учавствовало в соревнованиях: %s%n", countAnimals(animals));
+        countAnimals(animals);
         printInfo(animals, 50, 12);
     }
 
-    public static int countAnimals(Animal[] animalList){
-        int count = 0;
-        for (int i = 0; i < animalList.length; i++) {
-            count++;
-        }
-        return count;
+    public static void countAnimals(Animal[] animalList){
+        System.out.printf("Всего количество животных: %s%n", Animal.getCount());
+        System.out.printf("Всего количество собак: %s%n", Dog.getCount());
+        System.out.printf("Всего количество кошек: %s%n", Cat.getCount());
     }
 
     public static void printInfo(Animal[] animalList, int runDistance, int swimDistance){
