@@ -9,10 +9,6 @@ public class Dog extends Animal{
         count++;
     }
 
-    public static int getCount() {
-        return count;
-    }
-
     public void run(int distance) {
         if (getRunDistanceLimit() > distance){
             System.out.printf("%s пробежал %s m %n",getName(), distance);
