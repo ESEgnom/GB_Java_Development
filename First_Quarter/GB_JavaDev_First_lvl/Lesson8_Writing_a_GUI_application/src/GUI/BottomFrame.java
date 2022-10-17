@@ -8,14 +8,11 @@ import java.math.BigDecimal;
 
 public class BottomFrame {
     private final JPanel panel;
-    private BigDecimal result;
-    private String lastCommand;
-    private boolean start;
 
     public BottomFrame(JTextField inputField) {
         DigitButtonListener buttonListener = new DigitButtonListener(inputField);
         ActionButtonListener actionBL = new ActionButtonListener(inputField);
-        ResultButtonLestener resultBL = new ResultButtonLestener(inputField,actionBL.getLastCommand() , actionBL.getX());
+        ResultButtonLestener resultBL = new ResultButtonLestener(inputField);
         panel = new JPanel(new GridLayout(5, 4));
 
         JButton btnC = new JButton("c");

@@ -25,6 +25,7 @@ public class ActionButtonListener implements ActionListener {
     }
 
     public String getLastCommand() {
+        System.out.println("1 "+ lastCommand);
         return lastCommand;
     }
 
