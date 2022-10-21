@@ -12,7 +12,7 @@ public class BottomFrame {
     public BottomFrame(JTextField inputField) {
         DigitButtonListener buttonListener = new DigitButtonListener(inputField);
         ActionButtonListener actionBL = new ActionButtonListener(inputField);
-        ResultButtonLestener resultBL = new ResultButtonLestener(inputField);
+
         panel = new JPanel(new GridLayout(5, 4));
 
         JButton btnC = new JButton("c");
@@ -85,7 +85,7 @@ public class BottomFrame {
         JButton btnPlag2 = new JButton(" ");
         panel.add(btnPlag2);
         JButton btnResult = new JButton("=");
-        btnResult.addActionListener(resultBL);
+        btnResult.addActionListener(actionBL);
         panel.add(btnResult);
     }
 

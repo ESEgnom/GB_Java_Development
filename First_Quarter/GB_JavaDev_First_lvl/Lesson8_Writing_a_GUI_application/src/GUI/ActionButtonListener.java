@@ -8,7 +8,8 @@ import java.math.BigDecimal;
 public class ActionButtonListener implements ActionListener {
     private final JTextField inputField;
     private String lastCommand;
-    private int x;
+    private int x, y;
+
 
     public ActionButtonListener(JTextField inputField) {
         this.inputField = inputField;
@@ -18,18 +19,14 @@ public class ActionButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("+")){
             lastCommand = e.getActionCommand();
-           x = Integer.parseInt(inputField.getText());
-           inputField.setText("");
+            inputField.setText(inputField.getText() + " + ");
+
         }
-
-    }
-
-    public String getLastCommand() {
-        System.out.println("1 "+ lastCommand);
-        return lastCommand;
-    }
-
-    public int getX() {
-        return x;
+        if(e.getActionCommand().equals("=")){
+            String[] temp = inputField.getText().split(" ");
+            x = Integer.parseInt(temp[0]);
+            y = Integer.parseInt(temp[2]);
+            inputField.setText(String.valueOf(x + y));
+        }
     }
 }
