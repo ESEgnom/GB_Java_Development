@@ -1,0 +1,27 @@
+@startuml
+
+Printer <|-.BassicPrinter
+BassicPrinter <|-- StdOutPrinter
+BassicPrinter <|-- PdfPrinter
+
+interface Printer{
++{abstract} print(): void
+}
+
+abstract class BassicPrinter {
++print(): void
+-loadSpecification(): void
+#loadEnviroment(): void
+}
+
+class StdOutPrinter {
+-loadStream(OutputStream s):void
+}
+
+class PdfPrinter{
+-loadFile(File f):void
+}
+
+
+
+@enduml
